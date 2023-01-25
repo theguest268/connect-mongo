@@ -73,7 +73,7 @@ module.exports = function(connect) {
         try {
           this.Crypto = require('./crypto.js')
           this.Crypto.init(options)
-          delete options.secret
+          // delete options.secret
         } catch (error) {
           throw error
         }

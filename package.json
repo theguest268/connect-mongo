@@ -23,7 +23,7 @@
     "url": "https://github.com/jdesboeufs/connect-mongo/issues"
   },
   "dependencies": {
-    "mongodb": "^3.1.0"
+    "mongodb": "^3.7.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
