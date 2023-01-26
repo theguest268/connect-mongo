@@ -110,7 +110,8 @@ module.exports = function(connect) {
       if (options.url) {
         // New native connection using url + mongoOptions
         const _mongoOptions = mergeMongoOptions(options.mongoOptions)
-        MongoClient.connect(options.url, _mongoOptions, newConnectionCallback)
+        const mongoClient = MongoClient.MongoClient || MongoClient
+        mongoClient.connect(options.url, _mongoOptions, newConnectionCallback)
       } else if (options.mongooseConnection) {
         // Re-use existing or upcoming mongoose connection
         if (options.mongooseConnection.readyState === 1) {
